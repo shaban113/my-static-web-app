@@ -1,3 +1,5 @@
+console.log("vue.config.js is loaded");
+
 module.exports = {
   configureWebpack: {
     devtool: 'source-map',
@@ -5,7 +7,7 @@ module.exports = {
   devServer: {
     proxy: {
       '/api': {
-        target: 'http://localhost:7071',
+        target: 'https://localhost:7071', // Changed from http:// to https://
         ws: true,
         changeOrigin: true,
       },
